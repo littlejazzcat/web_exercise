@@ -52,7 +52,7 @@ h1{
     background-image:url(images/logo.svg);/*载入背景图片*/
     background-repeat:no-repeat;/*让背景只显示一张图*/
     background-position:center;/*让背景图显示在中间*/
-    width:210px;
+    width:210px;/*logo背景宽度*/
     text-indent:-9999px;
 }
 header ul{
@@ -76,4 +76,30 @@ header li{
     display:inline;/*修改li标签内容样式，将所有li标签放在一行（本来它们都是独占一整行的区块的）*/
     margin-right:4vw;/*设置导航栏右边距，vw是相对单位，4vw即视窗宽度的4%*/
 }
-
+.news{
+    /*对应news属性的section*/
+    background-color:antiquewhite;
+    color:white;
+    height:95vh;
+    background-image:url("images/banner.png");
+    background-repeat:no-repeat;/*只显示一张背景图*/
+    background-size:cover;/*覆盖整个区块*/
+    background-position:center;/*将图片放置于整个区块中间：前面用cover虽然覆盖了整个区块但是
+    相当于是将图片左上角对齐区块后向右下拉伸从而覆盖*/
+    display:flex;/*设置为弹性盒子，子元素默认会变成横向排列*/
+    flex-direction:column;/*使子元素纵向堆叠*/
+    align-items:center;/*水平对齐为中央，类似于word文档中的居中对齐（不是指整个盒子居中，下面那个才是）*/
+    justify-content:center;
+}
+/*display:flex创建弹性盒子，比原本的区块有更多的排列方式；包括：
+justify-content:center;水平置中
+justify-content:space-between;伸展到父元素的两侧
+justify-content:space-evenly;均分子元素的空隙 */
+.news h2{
+    font-size:60px;/*设置h2标签中的文字大小*/
+}
+.news p{
+    color:#FEF7E6;
+    font-size:18px;
+}
+.slogan
