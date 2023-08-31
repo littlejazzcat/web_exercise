@@ -102,4 +102,24 @@ justify-content:space-evenly;均分子元素的空隙 */
     color:#FEF7E6;
     font-size:18px;
 }
-.slogan
+.slogan{
+    background-color:#485652;
+    color:white;
+    height:250px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    line-height:1.8em;/*行高为1.8倍行距*/
+}
+footer{
+    background-color:black;
+    color:grey;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:14px;
+
+}    
