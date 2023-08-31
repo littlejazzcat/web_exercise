@@ -15,57 +15,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>练习网页</title>
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="style.css">
     <!--title标签对为显示在浏览器标签的网站名称-->
 </head>
-<body>
-    <header><!--<header>标签对是html5新引入的，它包含网站的logo等首页相关资讯
-    <!--head标签对为标题分位6个等级：h1、h2...-->
-    <h1>烘焙工坊</h1>
-    <nav> <!--<nav>标签对用于放置网站的导览列或主选单-->
-    <!--区块元素（无论内容是否填满区块，都会占一整个区块的空间）：p标签独占一行显示 img标签也是区块元素独占一整行-->   
-    <!--与区块元素相对的是行内元素（有多少内容就占多少空间）：<strong>粗体标签对、
-        <em>斜体标签对、<a>标签对
-        -->
-    <!--清单构建标签：<ol>标签对(ordered list)
-        清单的内容使用<li>标签对-->
-    <ol>
-        <li><a href="#">最新消息</a></li>
-        <li><a href="#">关于我们</a></li>
-        <li><a href="#">门市据点</a></li>
-        <li><a href="#">会员专区</a></li>
-    </ol>
-    </nav>
-    </header>
-    <main> <!--<main>标签包含了网页的主要内容，可以使用<section>标签对将内容继续划分，这将
-        有利于后续的页面美化等。值得说明的是像<main>、<section>都不会对内容进行改变，但是会
-            将内容都放进一个区块就好像将东西收拾进各自的盒子里，而<header>和<footer>除了会
-            分别将内容调整为页面首部导航栏和尾部声明，其它作用和<main>还有<section>一样，
-            这样之后可以分别对这些盒子进行调整以美化页面以及添加效果等--> 
-    <!--可以发现上面加了<ol>标签对的情况下，列表元素会自动在前面加上排序序号-->
-    <!--而ul标签对则会在内容前加上圆点-->
-    <section><!--<section>标签对用于将main标签对中的内容分为不同主题（在网页中的表现就是将该标签对中的内容
-        都放进一个区块中）
-    <h2>健康谷物面包新鲜出炉！</h2>
-    <p><strong>亚麻的细语、葵花的微风、每一口都是自然的气息。</strong></p>
-        <!--a标签对建立网页的连接,href属性为要跳转的网页地址-->
-    <p><a href="#">了解更多</a></p>
-    </section>
-    <!--blockquote标签对引用名人名言等,cite属性可以标注引用网址，<br>标签可以换行-->
-    <section>
-    <blockquote cite="https://www.example.com/source">“优选天然食材，精湛匠心烘焙，<br>让幸福在每口面包中的香气中蔓延”</blockquote>
-    </section>
-    <section>
-    <!--img标签对可以引用图片，要标注src属性 alt属性可以在图片无法正常加载时显示对应文字-->
-    <img src="images/shop.png" alt="烘焙工坊大安店">
-    <h2>8月1日大安...隆重开业！</h2>
-    <p>享受花园庭院的悠闲时光，内有作为与美食相伴,<br>
-    即日起来店消费加关注可获优惠，等您一同品位</p>
-    </section>
-    </main>
-    <footer>
-        <!--<footer>为页尾用于添加版权声明等附加资讯-->
-        <p>Copyright ...Reserved</p>
-    </footer>
-</body>
+    <body>
+        <header><!--<header>标签对是html5新引入的，它包含网站的logo等首页相关资讯-->
+        <!--head标签对为标题分位6个等级：h1、h2...-->
+            <h1>烘焙工坊</h1>
+            <nav> <!--<nav>标签对用于放置网站的导览列或主选单-->
+        <!--区块元素（无论内容是否填满区块，都会占一整个区块的空间）：p标签独占一行显示 img标签也是区块元素独占一整行-->   
+        <!--与区块元素相对的是行内元素（有多少内容就占多少空间）：<strong>粗体标签对、
+            <em>斜体标签对、<a>标签对
+            -->
+        <!--清单构建标签：<ol>标签对(ordered list)
+            清单的内容使用<li>标签对-->
+                <ul>
+                    <li><a href="#">最新消息</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">门市据点</a></li>
+                    <li><a href="#">会员专区</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main> <!--<main>标签包含了网页的主要内容，可以使用<section>标签对将内容继续划分，这将
+            有利于后续的页面美化等。值得说明的是像<main>、<section>都不会对内容进行改变，但是会
+                将内容都放进一个区块就好像将东西收拾进各自的盒子里，而<header>和<footer>除了会
+                分别将内容调整为页面首部导航栏和尾部声明，其它作用和<main>还有<section>一样，
+                这样之后可以分别对这些盒子进行调整以美化页面以及添加效果等--> 
+            <!--可以发现上面加了<ol>标签对的情况下，列表元素会自动在前面加上排序序号-->
+            <!--而ul标签对则会在内容前加上圆点-->
+            <section>
+                    <!--<section>标签对用于将main标签对中的内容分为不同主题（在网页中的表现就是将该标签对中的内容
+                    都放进一个区块中）-->
+                <h2>健康谷物面包新鲜出炉！</h2>
+                <p><strong>亚麻的细语、葵花的微风、每一口都是自然的气息。</strong></p>
+                    <!--a标签对建立网页的连接,href属性为要跳转的网页地址-->
+                <p><a href="#">了解更多</a></p>
+                </section>
+                <!--blockquote标签对引用名人名言等,cite属性可以标注引用网址，<br>标签可以换行-->
+            <section>
+                <blockquote cite="https://www.example.com/source">“优选天然食材，精湛匠心烘焙，
+                    <br>让幸福在每口面包中的香气中蔓延”</blockquote>
+            </section>
+            <section>
+                <!--img标签对可以引用图片，要标注src属性 alt属性可以在图片无法正常加载时显示对应文字-->
+                <img src="images/shop.png" alt="烘焙工坊大安店">
+                <h2>8月1日大安...隆重开业！</h2>
+                <p>享受花园庭院的悠闲时光，内有作为与美食相伴,<br>
+                即日起来店消费加关注可获优惠，等您一同品位</p>
+            </section>
+        </main>
+        <footer>
+            <!--<footer>为页尾用于添加版权声明等附加资讯-->
+            <p>Copyright ...Reserved</p>
+        </footer>
+    </body>
 </html>
