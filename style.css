@@ -1,0 +1,24 @@
+/*css样式用于美化网页如调整字体、修改图片大小、修改区块内外边距等
+
+添加css样式有三种方法：
+1、直接在html文档中标签加上style属性例如<h1 style ="color: red">
+2、直接在html文档头部中用<style>标签对包括起来如：
+<style>
+    h2{
+        color: Red;
+    }
+    p{
+        color: blue;
+        font-size:36px;
+    }
+</style>
+这种方法可以对网页中所有标签进行修改，但一个网站往往由多个网页构成。
+3、直接新建一个css样式表 再在对应html文档中用link标签将样式表连回原来网页
+   rel属性是文件类型，href是路径 */
+h2{
+    color: Red;
+}
+p{
+    color: blue;
+    font-size:36px;
+}    

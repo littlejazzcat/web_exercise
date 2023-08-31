@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--网页所有资讯都会被放入<html>标签对中
+    而html标签对中主要有<head>标签对和<body>标签对
+        其中<head>标签对即头部的内容不会在网页中显示主要是一些后台资料
+        比如文件的字符编码、关键字、程序脚本等
+        用户所看到的内容包括文字、按钮、图片等都放在<body>标签对中-->
+<html lang="zh-Hans">
+<!--网页语言：
+    zh-Hant:繁体中文
+    zh-Hans:简体中文
+    zh-CN:中国大陆
+    zh-HK：中国香港
+    en:英文-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习网页</title>
+    <link rel="stylesheet" href="style.css"
+    <!--title标签对为显示在浏览器标签的网站名称-->
+</head>
+<body>
+    <!--head标签对为标题分位6个等级：h1、h2...-->
+    <h1>烘焙工坊</h1>
+    <h2>健康谷物面包新鲜出炉！</h2>
+    <!--区块元素（无论内容是否填满区块，都会占一整个区块的空间）：p标签独占一行显示 img标签也是区块元素独占一整行-->
+    <p><strong>亚麻的细语、葵花的微风、每一口都是自然的气息。</strong></p>
+    
+    <!--与区块元素相对的是行内元素（有多少内容就占多少空间）：<strong>粗体标签对、
+        <em>斜体标签对、<a>标签对
+        -->
+    <!--a标签对建立网页的连接,href属性为要跳转的网页地址-->
+    <p><a href="#">了解更多</a></p>
+    <!--清单构建标签：<ol>标签对(ordered list)
+        清单的内容使用<li>标签对-->
+    <ol>
+        <li><a href="#">最新消息</a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">门市据点</a></li>
+        <li><a href="#">会员专区</a></li>
+    </ol>
+    <!--可以发现上面加了<ol>标签对的情况下，列表元素会自动在前面加上排序序号-->
+    <!--而ul标签对则会在内容前加上圆点-->
+
+    <!--blockquote标签对引用名人名言等,cite属性可以标注引用网址，<br>标签可以换行-->
+    <blockquote cite="https://www.example.com/source">“优选天然食材，精湛匠心烘焙，<br>让幸福在每口面包中的香气中蔓延”</blockquote>
+    <!--img标签对可以引用图片，要标注src属性 alt属性可以在图片无法正常加载时显示对应文字-->
+    <img src="images/shop.png" alt="烘焙工坊大安店">
+
+</body>
+</html>
