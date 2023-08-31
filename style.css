@@ -13,12 +13,67 @@
     }
 </style>
 这种方法可以对网页中所有标签进行修改，但一个网站往往由多个网页构成。
-3、直接新建一个css样式表 再在对应html文档中用link标签将样式表连回原来网页
+3、直接新建一个css样式表内容和<style>标签对里需要的内容相同 再在对应html文档中用link标签将样式表连回原来网页
    rel属性是文件类型，href是路径 */
-h2{
-    color: Red;
+
+/*css中三个重要的属性：
+border（边框）
+padding （内边距）即内容与边框的距离
+margin （外边距）控制不同网页之间的距离
+
+浏览器本身也有定义一些css样式的预设值比如padding、margin
+*/
+*{/*  *号即对整个html文档生效，这一部分用于清除浏览器的预设值以免后续受到干扰*/
+    padding: 0;
+    margin: 0;
+    
+} 
+/*
+header,section,footer{
+    background-color: #d6ccc2;设置对应区块的背景颜色
+    border:5px  #9d8189 solid;para:边框粗细，颜色，线条样式;solid:一般的直线;dashed:虚线;dotted:圆点
+    padding:30px;para:一个值:四周均设置，四个值:上、右、下、左；三个值:上、左右、下：两个值：上下、左右
+    margin:30px;para:同padding
 }
-p{
-    color: blue;
-    font-size:36px;
-}    
+*/
+header{
+    background-color: #241a24;
+    height:80px;/*页首高度设为80像素*/
+    width:100%;/*页首宽度设为与视窗同宽*/
+    position:relative;/*区块位置模式有绝对和相对模式，相对模式指相对原来位置移动，绝对模式则元素在定位时
+    以包覆该元素的容器来进行计算（即在该容器内某某位置）*/
+}
+h1{
+    color:white;
+    position:absolute;
+    top:0;
+    left:120px;
+    line-height:80px;
+    background-image:url(images/logo.svg);/*载入背景图片*/
+    background-repeat:no-repeat;/*让背景只显示一张图*/
+    background-position:center;/*让背景图显示在中间*/
+    width:210px;
+    text-indent:-9999px;
+}
+header ul{
+    position:absolute;/*将导航栏按钮位置设为绝对模式*/
+    right:5vw;
+    top:0;
+    line-height:80px;/*改变文字的行距可以理解成文字上下所占空间即文字的容器上下距离（这个不等同于文字大小）将其设为80像素等于
+    页首高度，而上边缘为0即文字容器上边缘与页首对齐，所以此时文字会居于页首中间*/
+}
+header a{
+    /*header中的a标签*/
+    color:white;
+    text-decoration:none;/*导航栏的文字下划线取消*/
+
+}
+header a:hover{
+    /*鼠标悬停时的样式*/
+    text-decoration:underline;/*当鼠标悬停在导航栏时显示文字的下划线*/
+}
+header li{
+    display:inline;/*修改li标签内容样式，将所有li标签放在一行（本来它们都是独占一整行的区块的）*/
+    margin-right:4vw;/*设置导航栏右边距，vw是相对单位，4vw即视窗宽度的4%*/
+}
+
