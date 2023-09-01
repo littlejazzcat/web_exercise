@@ -21,6 +21,7 @@
     <body>
         <header><!--<header>标签对是html5新引入的，它包含网站的logo等首页相关资讯-->
         <!--head标签对为标题分位6个等级：h1、h2...-->
+        <button class="menu">&#9776;</button><!--插入汉堡选单-->
             <h1>烘焙工坊</h1>
             <nav> <!--<nav>标签对用于放置网站的导览列或主选单-->
         <!--区块元素（无论内容是否填满区块，都会占一整个区块的空间）：p标签独占一行显示 img标签也是区块元素独占一整行-->   
@@ -53,16 +54,47 @@
                 <p><a href="#">了解更多</a></p>
                 </section>
                 <!--blockquote标签对引用名人名言等,cite属性可以标注引用网址，<br>标签可以换行-->
-            <section>
+            <section class="slogan">
                 <blockquote cite="https://www.example.com/source">“优选天然食材，精湛匠心烘焙，
                     <br>让幸福在每口面包中的香气中蔓延”</blockquote>
             </section>
-            <section class="slogan">
+            <section class="shop">
                 <!--img标签对可以引用图片，要标注src属性 alt属性可以在图片无法正常加载时显示对应文字-->
                 <img src="images/shop.png" alt="烘焙工坊大安店">
+            <!--辅助标签对<div>（区域）用于划分或组织HTML的元素，可以理解成用另一个盒子将原来几个盒子
+                装起来方便后续一起调整修改样式-->
+                <div class="info"> <!--这里用div标签对将原本的三个区块（img、h2、p）变成了两个
+                img、div-->
                 <h2>8月1日大安...隆重开业！</h2>
                 <p>享受花园庭院的悠闲时光，内有作为与美食相伴,<br>
                 即日起来店消费加关注可获优惠，等您一同品位</p>
+                </div>
+            </section>
+            <section class="product">
+                <div>
+                    <img src="images/p1.png" alt="巴黎风法国吐司">
+                    <h3>巴黎风法国吐司</h3>
+                    <p>外皮金黄酥脆，肉质松软<br>让您体验法式浪漫的味觉享受</p>
+                </div>
+                <div>
+                    <img src="images/p2.png" alt="皇家奶油可颂面包">
+                    <h3>皇家奶油可颂面包</h3>
+                    <p>...<br>...</p>
+                </div>
+                <div>
+                    <img src="images/p3.png" alt="健康营养全麦吐司">
+                    <h3>健康营养全麦吐司</h3>
+                    <p>...<br>...</p>
+                </div>
+            </section>
+            <section class="newsletter">
+                <p>欢迎订阅烘焙工坊电子报，可不定期受到限定优惠</p>
+                <!--form标签对用于创建表单，input标签创建输入框，placeholder用于添加输入说明
+                required表示为必填项，button标签对用于创建可点击按钮-->
+                <form>
+                    <input type="email" palceholder="请输入您的Email" required>
+                    <button type="submit">送出</button>
+                </form>
             </section>
         </main>
         <footer>

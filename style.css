@@ -37,11 +37,12 @@ header,section,footer{
 }
 */
 header{
-    background-color: #241a24;
+    background-color: rgba(35,28,26,0.8);/*前面三项分别为rgb，最后一项为透明度从0到1*/
     height:80px;/*页首高度设为80像素*/
     width:100%;/*页首宽度设为与视窗同宽*/
-    position:relative;/*区块位置模式有绝对和相对模式，相对模式指相对原来位置移动，绝对模式则元素在定位时
+    position:fixed;/*区块位置模式有绝对和相对模式，相对模式指相对原来位置移动，绝对模式则元素在定位时
     以包覆该元素的容器来进行计算（即在该容器内某某位置）*/
+    /*position改成fixed后导航栏会一直在页面的上方，但是此时整个版面会向上偏移所以要将第二个区块高度加大*/
 }
 h1{
     color:white;
@@ -97,6 +98,7 @@ justify-content:space-between;伸展到父元素的两侧
 justify-content:space-evenly;均分子元素的空隙 */
 .news h2{
     font-size:60px;/*设置h2标签中的文字大小*/
+    margin-top:60px;
 }
 .news p{
     color:#FEF7E6;
@@ -123,3 +125,133 @@ footer{
     font-size:14px;
 
 }    
+.shop{
+    display:flex;
+}
+.shop img{
+    width:50%;
+}
+.info{
+    width:50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+.info h2{
+    font-size:40px;
+    margin-bottom: 30px;
+
+}
+.info p{
+    text-align:center;
+    line-height:2em;
+}
+.product{
+    display:flex;
+    background-color: #ede9db;
+    justify-content: space-between;
+    align-items: center;
+    padding:100px 180px 80px;
+}
+.product div{
+    width: 300px;
+    text-align: center;
+
+}
+.product img{
+    width: 100%;
+    border-radius: 10px;
+}
+.product h3{
+    font-size: 20px;
+    margin: 20px 0;
+}
+.product p{
+    font-size: 14px;
+    line-height: 1.6em;
+}
+.newsletter{
+    background-color: #485652;
+    color:white;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newsletter p{
+    margin-bottom: 20px;
+}
+.newsletter input,.newsletter button{
+    background-color: transparent;
+    color:white;
+    border:1px solid #949d9a;
+    padding: 10px;
+    border-radius: 5px;/*添加边框圆角效果*/
+}
+.newsletter input{
+    width:200px;
+    margin-right: 15px;
+}
+.newsletter button{
+    width: 80px;
+    cursor: pointer;/*当鼠标悬停在按钮上时变成手的形状*/
+}
+input::placeholder{ /*css语法：选择器*/
+    color: #DDDDDD;
+}
+input:focus{
+    outline:none;
+    border-color:#E0E9A3;
+}
+.menu{
+    display:none;/*在桌面显示器（大屏幕）显示时隐藏汉堡选单*/
+}
+/*响应式设计*/
+@media screen and (max-width: 768px){/*确定接下来语法生效条件
+    为屏幕宽度小于768像素*/
+    header ul{
+        display:none;/*屏幕减小时导航栏与logo重叠所以先隐藏起来*/
+    }
+    header h1{
+        left: 50%;/*将logo放置在距离左边框50%的距离（但是此时
+        是以logo区块左上角为中心移动）*/
+        transform:translateX(-50%);/*让logo沿着水平x轴向左移动
+        半个区块的距离达到logo水平居中的目的*/
+    }
+    .news h2{
+        font-size:40px;
+    }
+    .menu{
+        display: block;/*在小屏幕时将汉堡选单显示为区块元素*/
+        background-color: transparent;
+        color: white;
+        font-size: 35px;
+        position:absolute;
+        top:15px;
+        left: 20px;
+        border: none;/*无边框*/
+        cursor: pointer;/*鼠标悬停时变为手i形状*/
+    }
+    .shop img{
+        width:100%;
+    }
+    .info{
+        width:100%;
+        padding: 40px 0;
+
+    }
+    .info h2{
+        font-size: 30px;
+    }
+    .product{
+        flex-direction: column;/*改为上下并排*/
+        padding: 60px 0;
+    }
+    .product div{
+        margin-bottom: 30px;
+    }
+
+
+}
